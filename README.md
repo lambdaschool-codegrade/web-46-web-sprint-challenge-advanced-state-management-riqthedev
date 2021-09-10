@@ -33,20 +33,20 @@ In this challenge, you are to build a Smurfs village database utilizing Redux as
 #### reducers/index.js
   Add in the needed state and reducer cases to hold and modify smurf error messages, loading status and smurf data. **If at all possible, add in action cases one at a time, instead of all at once. Test your state connects and reducer cases as nessisary.**
 
-  * [ ] Adds the following state values into the initialState:
+  * [√] Adds the following state values into the initialState:
       - an array of smurfs
       - a boolean indicating if the app is loading
       - a string indicating a possible error message
 
-  * [ ] Add in the arguments needed to complete a standard reducer function.
-  * [ ] Add in a reducer case to accommodate the start of a smurf fetch.
-  * [ ] Add in a reducer case to accommodate the successful smurf api fetch.
-  * [ ] Add in a reducer cases to accommodate an error.
-  * [ ] Add in a reducer case to accommodate adding a smurf (including the name, nickname, position, description and an internally generated id) into your smurf list.
-  * [ ] Add in a reducer case that adds in a value to the error message.
+  * [√] Add in the arguments needed to complete a standard reducer function.
+  * [√] Add in a reducer case to accommodate the start of a smurf fetch.
+  * [√] Add in a reducer case to accommodate the successful smurf api fetch.
+  * [√] Add in a reducer cases to accommodate an error.
+  * [√] Add in a reducer case to accommodate adding a smurf (including the name, nickname, position, description and an internally generated id) into your smurf list.
+  * [√] Add in a reducer case that adds in a value to the error message.
 
 #### index.js
-  Connect your application to reducer through redux with the thunk and logger middleware packages attached.
+  Connect your application to reducer through redux with the thunk and logger middleware packages attached. [√]
 
 #### actions/index.js
   Add in the action creators and action constants needed to add a smurf to state and fetch smurfs from the server. **If at all possible, add in action cases one at a time, instead of all at once. Test your state connects and reducer cases as nessisary.**
@@ -88,7 +88,7 @@ In this challenge, you are to build a Smurfs village database utilizing Redux as
   * It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
 ### Reference Materials
-
+ 
 #### Resource: API documentation 
 
 #### API Documentation
@@ -119,6 +119,33 @@ In this challenge, you are to build a Smurfs village database utilizing Redux as
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers to the questions within `interview_answers.md` file. These will not be counted as a part of your sprint score but will be helpful for preparing you for your endorsement interview, and enhancing overall understanding.
 
 1. What problem does the context API help solve?
-2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+   - helping share data with multiple components without having to pass data through props manually.
+
+
+
+2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each 
+  piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+- Actions is something that we do to get to the nxt step or betteryet to transition.
+
+
+- Reducers are pure functions that helps modifys the application state.
+
+
+- The store is a place where we hold the entire application state. its known as the singe source of truth because we get the same output everytime.
+
+
+
+
 3. What does `redux-thunk` allow us to do? How does it change our `action-creators`?
+ 
+ - Allows us to call action creators that return functions. it changes our action creators by making them Async 
+
+
+
 4. What is your favorite state management system you've learned and this sprint? Please explain why!
+
+Redux. I like redux alot due to the fact that it was a challenge to learn but still pretyy fun to use!
+
+
