@@ -15,8 +15,8 @@ const AddForm = (props) => {
     });
 
     //remove when error state is added
-   const errorMessage = state.errorMessage
-   console.log(props.error)
+   
+   
     const handleChange = e => {
         setState({
             ...state,
@@ -36,7 +36,7 @@ const AddForm = (props) => {
 
     return(<section>
         <h2>Add Smurf</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} >
             <div className="form-group">
                 <label htmlFor="name">Name:</label><br/>
                 <input onChange={handleChange} value={state.name} name="name" id="name" />
@@ -54,7 +54,7 @@ const AddForm = (props) => {
                 <textarea onChange={handleChange} value={state.description} name="description" id="description" />
             </div>
             {
-               errorMessage && <div data-testid="errorAlert" className="alert alert-danger" role="alert">Error: {errorMessage}</div>
+               props.errorMessage && <div  data-testid="errorAlert"  className="alert alert-danger" role="alert">Error: {props.error}</div>
             }
             <button onClick={handleSubmit}>Submit Smurf</button>
         </form>
@@ -62,9 +62,16 @@ const AddForm = (props) => {
 }
 
 
+const mapStateToProps = (state) => {
+
+    return {
+        error: state.error,
+    };
+}
 
 
-export default connect(null, {addSmurf,errorMessage})(AddForm);
+
+export default connect(mapStateToProps, {addSmurf,errorMessage})(AddForm);
 
 //Task List:
 //1. Connect the errorMessage, setError and addSmurf actions to the AddForm component.
